@@ -1,10 +1,10 @@
 void main() {
   int number = 12345;
+  String numberString = number.toString();
   int sum = 0;
-  while (number > 0) {
-    int digit = number % 10;
+  for (int i = 0; i < numberString.length; i++) {
+    int digit = int.parse(numberString[i]);
     sum += digit;
-    number ~/= 10;
+    print("sum of digit: $sum");
   }
-  print("$sum");
 }
