@@ -2,11 +2,17 @@ import 'dart:math';
 
 void main() {
   int number = 17;
-  for (int x = 2; x <= sqrt(number); x++) {
-    if (number % 2 == 0) {
-      print("$number is not a prime number");
-    } else {
-      print("$number is a prime number");
+  ;
+  bool isPrime = true;
+  for (int i = 2; i <= sqrt(number); i++) {
+    if (number % i == 0) {
+      isPrime = false;
+      break;
     }
+  }
+  if (isPrime) {
+    print('$number is a prime number.');
+  } else {
+    print('$number is not a prime number.');
   }
 }
